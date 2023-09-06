@@ -10,40 +10,70 @@ void printMenu(int& choice) {
 	cout << "4. Division" << endl;
 	cout << "\nYour Selection: ";
 	cin >> choice;
+
+	// this is listing all of the choices, its printing a menu.
 }
 void getChoices(float& A, float& B) {
-	cout << "Please enter the first value:";
+	cout << "Please enter the first value: ";
 	cin >> A;
-	cout << "please enter the second value:";
+	cout << "please enter the second value: ";
 	cin >> B;
 
-	// The rest of this function is an exercise to the reader
+	// Asking for you to input the numbers you want 
 }
 void firstChoice(float A, float B) {
-	cout << "Calculating..." << endl;
-	
+	cout << "\n Calculating..." << endl;
+	A + B;
+	cout << "\n " << A << " + " << B << " = " << A + B << endl;
+
+	// creating a new line, printing "Calculating..."  and then calculating a + b and outputting the answer, 
+	// which is written all on one line to avoid redundancy 
 
 }
 void secondChoice(float A, float B) {
-	cout << "This is proving the second choice ran" << endl;
+	cout << "\n Calculating..." << endl;
+	A - B;
+	cout << "\n " << A << " - " << B << " = " << A - B << endl;
+	// same as before ^^ just subtracting
+}
+void thirdChoice(float A, float B) {
+	cout << "\n Calculating..." << endl;
+	A * B;
+	cout << "\n " << A << " * " << B << " = " << A * B << endl;
+	// same as before ^^ just multiplying
+}
+void fourthChoice(float A, float B) {
+	cout << "\n Calculating..." << endl;
+	A / B;
+	cout << "\n " << A << " / " << B << " = " << A / B << endl;
+	// Dividing
 }
 int main() {
 	int choice;
 	float A;
 	float B;
 
-
 	printMenu(choice);
 	getChoices(A, B);
+
 	if (choice == 1) {
 		firstChoice(A, B);
-
-		if (choice == 2) {
-			secondChoice(A, B);
-		}
-		return 0;
 	}
+
+	if (choice == 2) {
+		secondChoice(A, B);
+	}
+	
+	if (choice == 3) {
+		thirdChoice(A, B);
+	}
+
+	if (choice == 4) {
+		fourthChoice(A, B);
+	}
+	return 0;
 }
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
